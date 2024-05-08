@@ -1,16 +1,9 @@
-from telebot.types import (InlineKeyboardButton, 
-						   InlineKeyboardMarkup, 
-						   ReplyKeyboardMarkup)
+from telebot.types import InlineKeyboardButton, InlineKeyboardMarkup						   
 
 from telebot import TeleBot
 from config import API_token
 
 bot = TeleBot(API_token)
-
-# Put the token that you received from BotFather in the quotes
-API_token = "7049953760:AAGI98OiR5H7c9EgtRL2lW02tmfkCyBawFI"
-bot = TeleBot(API_token)
-
 
 # Defining and adding buttons 
 button1 = InlineKeyboardButton(text="button1", callback_data="In_First_button") 
