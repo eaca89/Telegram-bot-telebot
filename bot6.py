@@ -18,9 +18,3 @@ def send_update(message):
         bot.send_message(id, "The product is available.")
 
 bot.polling()
-
-
-
-
-
-
