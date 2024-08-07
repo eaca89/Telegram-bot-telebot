@@ -13,7 +13,7 @@ def is_user_member(user_id):
         if member.status in ['member', 'administrator', 'creator']:
             return True
     except Exception as e:
-        print(f'Error: {e}')
+        print(f"Error: {e}")
     return False
 
 # Start command handler
@@ -31,15 +31,6 @@ def send_help(message):
     user_id = message.from_user.id
     if is_user_member(user_id):
         bot.send_message(message.chat.id, "This is the help message for the bot.")
-    else:
-        bot.send_message(message.chat.id, f"You need to join the channel @{CHANNEL_USERNAME} to use this bot.")
-
-# Example text message handler
-@bot.message_handler(func=lambda message: True)
-def handle_message(message):
-    user_id = message.from_user.id
-    if is_user_member(user_id):
-        bot.send_message(message.chat.id, "You sent a message.")
     else:
         bot.send_message(message.chat.id, f"You need to join the channel @{CHANNEL_USERNAME} to use this bot.")
 
